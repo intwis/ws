@@ -1,0 +1,61 @@
+{
+  "version": "1",
+  "cognitoConfig": {
+    "identityPoolName": "wsa97sa23e64655_identitypool_23e64655",
+    "allowUnauthenticatedIdentities": false,
+    "resourceNameTruncated": "wsa97s23e64655",
+    "userPoolName": "wsa97sa23e64655_userpool_23e64655",
+    "autoVerifiedAttributes": [
+      "email"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+      "SMS Text Message"
+    ],
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [],
+    "requiredAttributes": [
+      "email"
+    ],
+    "aliasAttributes": [],
+    "userpoolClientGenerateSecret": false,
+    "userpoolClientRefreshTokenValidity": "30",
+    "userpoolClientWriteAttributes": [
+      "email"
+    ],
+    "userpoolClientReadAttributes": [
+      "email"
+    ],
+    "userpoolClientLambdaRole": "wsa97s23e64655_userpoolclient_lambda_role",
+    "userpoolClientSetAttributes": false,
+    "sharedId": "23e64655",
+    "resourceName": "wsa97sa23e6465523e64655",
+    "authSelections": "identityPoolAndUserPool",
+    "useDefault": "manual",
+    "thirdPartyAuth": true,
+    "authProviders": [
+      "accounts.google.com",
+      "appleid.apple.com"
+    ],
+    "usernameAttributes": [
+      "email"
+    ],
+    "userPoolGroups": false,
+    "adminQueries": false,
+    "triggers": {},
+    "hostedUI": false,
+    "audiences": [
+      "413733361127-4etcu0s3spcni73dl3792fsk4gpovukr.apps.googleusercontent.com",
+      "413733361127-2gluf4h6blm24jdsbvmerjgfra1j0air.apps.googleusercontent.com"
+    ],
+    "userPoolGroupList": [],
+    "serviceName": "Cognito",
+    "usernameCaseSensitive": false,
+    "useEnabledMfas": true
+  }
+}

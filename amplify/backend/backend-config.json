@@ -1,0 +1,56 @@
+{
+  "auth": {
+    "wsa97sa23e6465523e64655": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_auth_wsa97sa23e6465523e64655_appleAppId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "wsa97sa23e6465523e64655"
+        }
+      ]
+    },
+    "AMPLIFY_auth_wsa97sa23e6465523e64655_googleClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "wsa97sa23e6465523e64655"
+        }
+      ]
+    },
+    "AMPLIFY_auth_wsa97sa23e6465523e64655_googleIos": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "wsa97sa23e6465523e64655"
+        }
+      ]
+    }
+  }
+}

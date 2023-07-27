@@ -1,0 +1,24 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-wsa97sa-dev-230832-authRole",
+      "UnauthRoleArn": "arn:aws:iam::794807608579:role/amplify-wsa97sa-dev-230832-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::794807608579:role/amplify-wsa97sa-dev-230832-authRole",
+      "Region": "ap-northeast-2",
+      "DeploymentBucketName": "amplify-wsa97sa-dev-230832-deployment",
+      "UnauthRoleName": "amplify-wsa97sa-dev-230832-unauthRole",
+      "StackName": "amplify-wsa97sa-dev-230832",
+      "StackId": "arn:aws:cloudformation:ap-northeast-2:794807608579:stack/amplify-wsa97sa-dev-230832/bd6f5140-2af4-11ee-b56f-02214d747a24",
+      "AmplifyAppId": "d1r3es4d0i7lqk"
+    },
+    "categories": {
+      "auth": {
+        "wsa97sa23e6465523e64655": {
+          "googleClientId": "413733361127-4etcu0s3spcni73dl3792fsk4gpovukr.apps.googleusercontent.com",
+          "googleIos": "413733361127-2gluf4h6blm24jdsbvmerjgfra1j0air.apps.googleusercontent.com",
+          "appleAppId": "com.yeonwoo.ws"
+        }
+      }
+    }
+  }
+}
