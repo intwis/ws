@@ -31,7 +31,7 @@ struct ContentView: View {
             
                         Button(action: {
                             Task{
-                                await signOutLocally()
+                                await signOutLocally2()
                             }
             
             
@@ -209,12 +209,61 @@ struct ContentView: View {
             print("Failed to sign up user with error:", error)
         }
         
+        print("확인")
     }
     
+    //테스트
+    func signOutLocally2() async {
+        do {
+            // AWSCognitoAuthPlugin 얻기
+            guard let plugin = try? Amplify.Auth.getPlugin(for: "awsCognitoAuthPlugin") as? AWSCognitoAuthPlugin else {
+                print("Failed to get AWSCognitoAuthPlugin")
+                return
+            }
+
+            // Federation을 제거
+            try await plugin.clearFederationToIdentityPool()
+
+            // 로그아웃
+            let result = await Amplify.Auth.signOut()
+
+            guard let signOutResult = result as? AWSCognitoSignOutResult else {
+                print("Signout failed")
+                return
+            }
+
+            print("Local signout successful: \(signOutResult.signedOutLocally)")
+            switch signOutResult {
+            case .complete:
+                // Sign Out completed fully and without errors.
+                print("Signed out successfully")
+
+            case let .partial(revokeTokenError, globalSignOutError, hostedUIError):
+                // Sign Out completed with some errors. User is signed out of the device.
+                if let hostedUIError = hostedUIError {
+                    print("HostedUI error  \(String(describing: hostedUIError))")
+                }
+
+                if let globalSignOutError = globalSignOutError {
+                    print("GlobalSignOut error  \(String(describing: globalSignOutError))")
+                }
+
+                if let revokeTokenError = revokeTokenError {
+                    print("Revoke token error  \(String(describing: revokeTokenError))")
+                }
+
+            case .failed(let error):
+                // Sign Out failed with an exception, leaving the user signed in.
+                print("SignOut failed with \(error)")
+            }
+        } catch {
+            print("Failed to clear federation or sign out with error: \(error)")
+        }
+    }
 
     
     
-    
+    // 로그아웃
     func signOutLocally() async {
         
         let result = await Amplify.Auth.signOut()
